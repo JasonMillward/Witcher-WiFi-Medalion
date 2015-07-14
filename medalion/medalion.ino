@@ -33,7 +33,7 @@ void loop() {
     doVibration();
   }
   
-  delay(5000);
+  ESP.deepSleep(30000000, WAKE_RF_DEFAULT);
 }
 
 void doVibration() {
