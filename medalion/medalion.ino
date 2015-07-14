@@ -37,8 +37,9 @@ void loop() {
 }
 
 void doVibration() {
-  int delays[]   = { 200, 200, 200, 800, 800, 200, 200, 200};
-  int delayCount = 8;
+  // .-- .. ..-. ..
+  int delays[]   = { 200, 800, 800, 200, 200, 200, 200, 800, 200, 200, 200};
+  int delayCount = 11;
   
   delay(500);
   for (int thisPin = delayCount - 1; thisPin >= 0; thisPin--) { 
