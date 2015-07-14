@@ -42,9 +42,9 @@ void doVibration() {
   int delayCount = 11;
   
   delay(500);
-  for (int thisPin = delayCount - 1; thisPin >= 0; thisPin--) { 
+  for (int thisDelay = delayCount - 1; thisDelay >= 0; thisDelay--) { 
     digitalWrite(2, HIGH);
-    delay( delays[thisPin] );  
+    delay( delays[thisDelay] );  
     digitalWrite(2, LOW);
     delay(200);   
   }
