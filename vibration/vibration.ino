@@ -3,7 +3,9 @@
 void setup() {
   Serial.begin(115200);
 
-  pinMode(2, OUTPUT);
+  pinMode(12, OUTPUT);
+
+  digitalWrite(12, LOW);
   
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
@@ -32,8 +34,10 @@ void loop() {
   if (foundOpen) {
     doVibration();
   }
+
+  delay(1000 * 30);
   
-  ESP.deepSleep(30000000, WAKE_RF_DEFAULT);
+  //ESP.deepSleep(30000000, WAKE_RF_DEFAULT);
 }
 
 void doVibration() {
@@ -43,9 +47,9 @@ void doVibration() {
   
   delay(500);
   for (int thisDelay = delayCount - 1; thisDelay >= 0; thisDelay--) { 
-    digitalWrite(2, HIGH);
+    digitalWrite(12, HIGH);
     delay( delays[thisDelay] );  
-    digitalWrite(2, LOW);
+    digitalWrite(12, LOW);
     delay(200);   
   }
 }
