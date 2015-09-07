@@ -32,6 +32,7 @@ void loop() {
   }
 
   if (foundOpen) {
+    Serial.println("Open network found - vibrating");
     doVibration();
   }
 
