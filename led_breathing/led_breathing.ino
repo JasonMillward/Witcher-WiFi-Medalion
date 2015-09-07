@@ -40,17 +40,14 @@ void loop() {
   //ESP.deepSleep(30000000, WAKE_RF_DEFAULT);
 }
 
-
 void eyeGlow() {
   for (int i = 0; i <= 5; i++) {     
-    }
     for (int i = 0; i <= 1000; i++) { 
       digitalWrite(12, HIGH);
       delayMicroseconds(i); 
       digitalWrite(12, LOW);
       delayMicroseconds(1000 - i);
     }
-      
     for (int i = 1000; i >= 0; i--) { 
       digitalWrite(12, HIGH);
       delayMicroseconds(i); 
@@ -58,6 +55,5 @@ void eyeGlow() {
       delayMicroseconds(1000 - i); 
     }
   }
-  
 }
 
