@@ -43,11 +43,11 @@ void loop() {
 
 void doVibration() {
   // .-- .. ..-. ..
-  int delays[]   = { 200, 800, 800, 200, 200, 200, 200, 800, 200, 200, 200};
+  int delays[]   = {200, 800, 800, 200, 200, 200, 200, 800, 200, 200, 200};
   int delayCount = 11;
   
   delay(500);
-  for (int thisDelay = delayCount - 1; thisDelay >= 0; thisDelay--) { 
+  for (int thisDelay = 0; thisDelay < delayCount; thisDelay++) {
     digitalWrite(12, HIGH);
     delay( delays[thisDelay] );  
     digitalWrite(12, LOW);
